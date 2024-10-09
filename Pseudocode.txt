@@ -1,0 +1,131 @@
+﻿race.c
+
+
+
+
+In main:  
+
+
+Initialize variables 
+
+
+Prompt user for value 
+Get value from terminal and store in variable 
+Use variable to select random seed 
+
+
+If all of the animals positions are less than 70 than run the loop:
+        If Tortoise is in the lead and current winner isn't tortoise:
+                Make tortoise winner and print “At t = (current time), the tortoise (square (current tortoise
+position)) has taken the lead.”
+
+
+If Hare is in the lead and current winner isn't hare:
+                Make hare winner and print “At t = (current time), the hare (square (current hare
+position)) has taken the lead.”
+
+
+If bee is in the lead and current winner isn't bee:
+                Make bee winner and print “At t = (current time), the bee (square (current tortoise
+position)) has taken the lead.”
+
+
+
+
+current_hare _pos = update_hare(current_hare _pos)
+current_tortoise_pos = update_tortoise(current_tortoise_pos)
+current_bee_pos = update_bee(current_bee_pos)
+Update time by adding 1 
+
+
+
+
+If winner is hare:
+        Print “After (ending time) seconds, the hare wins!!”
+
+
+If winner is tortoise:
+        Print “After (ending time) seconds, the tortoise wins!!”
+
+
+If winner is bee:
+        Print “After (ending time) seconds, the bee wins!!”
+
+
+
+
+
+
+
+
+
+
+animals.c
+
+
+
+
+Int update_hare(int current_position):
+        Get random value  between 0 and 1 
+        
+        If value is in between 0 and 0.25:
+                Return current pos 
+        
+        If value is in between 0.25 and 0.45:
+                Return current pos +9
+
+
+        If value is in between 0.45 and 0.55:
+                Return current pos - 10 
+                If current pos < 0:
+                        Return 0
+
+
+        If value is in between 0.55 and 0.8:
+                Return current pos +2
+
+
+        If value is in between 0.8 and 1:
+                Return current pos - 3 
+                If current pos < 0:
+                        Return 0
+
+
+
+
+
+
+Int update_tortoise(int current_position):
+        Get random value between 0 and 1 
+        
+        If value is in between 0 and 0.45:
+                Return current pos  + 3
+        
+        If value is in between 0.45 and 0.65:
+                Return current pos - 5
+                If current pos < 0:
+                        Return 0
+
+
+        If value is in between 0.65 and 1:
+                Return current pos + 1 
+
+
+
+
+
+
+
+
+Int update_bee(int current_position):
+        Get random value between 0 and 1 
+        
+        If value is in between 0 and 0.30:
+                Return current pos  + 2
+        
+        If value is in between 0.30 and 0.50:
+                Return current pos + 1
+
+
+        If value is in between 0.65 and 1:
+                Return current pos
